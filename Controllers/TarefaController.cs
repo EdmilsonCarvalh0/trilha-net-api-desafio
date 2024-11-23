@@ -36,7 +36,7 @@ namespace TrilhaApiDesafio.Controllers
         public IActionResult ObterPorTitulo(string titulo)
         {
             var tarefa = _context.Tarefas.Where(x => x.Titulo == titulo);
-            return Ok();
+            return Ok(tarefa);
         }
 
         [HttpGet("ObterPorData")]
